@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Whatsapp Message Parser</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="styles.css" rel="stylesheet" type="text/css" />
+        <script src="https://kit.fontawesome.com/13bb02a67b.js" crossorigin="anonymous"></script>    
+    </head>
+    <body>
+        
+        <header><div id="head-div">Whatsapp Message Parser</div></header>
+
+        <!-- This is the input box, to print the messages -->
+        <div id="input-box">
+            <p id="label">Insira o bloco de mensagens abaixo:</p>
+            <textarea id="input-space"></textarea>
+        </div>
+        
+        <!-- Don't remove this button without moving the "onclick" trigger. (It triggers the main function to parse the messages) -->
+        <button id="parse-button" type="button" onclick="parseMessages(document.getElementById('input-space').value)">Avançar</button>
+        
+        <div id="output-box">
+            <div id="cellphone-top"></div>
+            <div id="cellphone-screen">
+                <!-- Don't remove this UL tag, otherwise the DOM elements the function creates will crash or create a bug in the application -->
+                <ul id="cellphone-project"></ul>
+            </div>
+            <div id="cellphone-bottom"></div>
+            <a id="read-link">Visualizar Completo</a>
+            <a id="clear-nodes" onclick="clearNodes()">Limpar</a>
+        </div>
+        
+        <div id="output-list">
+            <div id="message-output"></div>
+        </div>
+
+        
+        <a id="toBottom" onclick="window.scrollTo(0, document.body.offsetHeight + 10000)"><i class="fas fa-caret-square-down fa-3x"></i></a>
+        <a id="toTop" onclick="window.scrollTo(0, 0)"><i class="fas fa-caret-square-up fa-3x"></i></a>
+        
+        <script src="script.js"></script>
+    </body>
+</html>
